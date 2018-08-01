@@ -22,7 +22,9 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 f* performs [HKDF](https://tools.ietf.org/html/rfc5869) over the primary stored EC private key, using a constant value for SALT and a deterministic value for INFO.
 
 SALT = any number of bytes, the value of which is constant throughout the lifetime of the jupp device
+
 INFO = any number of bytes that includes a 32bit reference counter value RC
+
 RC = a 32bit unsigned integer that must increment by 1 each time f* is executed
 
 ## Form Factor Suggestions
