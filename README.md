@@ -17,6 +17,13 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 
 ![block diagram][blockdiagram]
 
+## The (f*) Function
+
+f* performs [HKDF](https://tools.ietf.org/html/rfc5869) over the primary stored EC private key, using a constant value for SALT and a deterministic value for INFO.
+
+SALT = any number of bytes, the value of which is constant throughout the lifetime of the jupp device
+INFO = any number of bytes that includes a 32bit reference counter value RC
+RC = a 32bit unsigned integer that must increment by 1 each time f* is executed
 
 ## Form Factor Suggestions
 
@@ -43,10 +50,11 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 
 A prototype jupp can be built using the following parts:
 
-* NFC Dynamic Tag: ST25DV-I2C https://www.st.com/en/nfc/st25dv-i2c-series-dynamic-nfc-tags.html?querycriteria=productId=SS1950
-* Microcontroller: https://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee
-* Hardware cryptographic accelerator: ATECC508A https://www.microchip.com/wwwproducts/en/ATECC508A
+* NFC Dynamic Tag: [ST25DV-I2C](https://www.st.com/en/nfc/st25dv-i2c-series-dynamic-nfc-tags.html?querycriteria=productId=SS1950)
+* Microcontroller: [EFM8 Sleepy Bee](https://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee)
+* Hardware cryptographic accelerator: [ATECC508A](https://www.microchip.com/wwwproducts/en/ATECC508A)
 * Optional battery: any 3.0-3.3v button cell configuration, e.g. 2 x LR621 (in series) -or- 1 x CR2025
+* Power management circuit: a discrete component subcircuit combining EH and battery supply, the EFM8 should be configured to enable the battery supply and disconnect the battey when both conditions are true: the jupp is not within an NFC RF field and the EFM8 has completed computing (f*)
 
 [blockdiagram]: https://github.com/benbenbenbenbenben/jupp/blob/master/Untitled%20Diagram.png "Block Diagram"
 
