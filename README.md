@@ -1,6 +1,5 @@
-# jupp
-## Just Useful Personal Privacy
-A low energy NFC device for cryptographic operations
+# jupp - just useful personal privacy
+A low energy NFC device for cryptographic operations (and GDPR friendliness!)
 
 ## Brief Description
 
