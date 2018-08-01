@@ -37,6 +37,7 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 * 3.5mm Audio Connector Interface **
 * Contact smartcard
 
+**data communication can be modulated in the audio spectrum in a similar manner the chirp.io project https://github.com/chirp/chirp-arduino
 ##
 
 [blockdiagram]: https://github.com/benbenbenbenbenben/jupp/blob/master/Untitled%20Diagram.png "Block Diagram"
