@@ -20,6 +20,23 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 
 ## Form Factor Suggestions
 
+### Weaable Form Factors
+* Finger ring*
+* Wrist bracelet
+* Necklace pendant
+
+* extant patents may prohibit commericialisation of jupp in this form factor
+
+### Alternative Form Factor Suggestions
+* Key fob
+* Contactless smartcard
+* Dual interface smartcard
+* USB dongle
+
+### Additional Contact Interface Considerations
+* 3.5mm Audio Connector Interface **
+* Contact smartcard
+
 ##
 
 [blockdiagram]: https://github.com/benbenbenbenbenben/jupp/blob/master/Untitled%20Diagram.png "Block Diagram"
