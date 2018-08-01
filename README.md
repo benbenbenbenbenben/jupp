@@ -5,7 +5,7 @@ A low energy NFC device for cryptographic operations
 
 The jupp device (herein jupp) is an electronic low energy device capable of operation i. with battery support and ii. with energy harvested from an NFC RF field.
 
-The primary purpose of jupp is to a. store an EC private key and b. return a single use derived EC public key hash (f*) on contact with a NFC reader and c. store PIN-protected x509 certificate material for performing on-device cryptographic digests.
+The primary purpose of jupp is to a. store an EC private key (ipk) and b. return a single use derived EC public key hash (f*) on contact with a NFC reader and c. store PIN-protected x509 certificate material for performing on-device cryptographic digests.
 
 On a.; when a user first activates a jupp, it will generate a private key internally, which cannot be extracted. Additionally a user may initialise jupp by transmitting an off-device computed key as an NFC/NDEF write operation.
 
@@ -58,6 +58,19 @@ A prototype jupp can be built using the following parts:
 * Optional battery: any 3.0-3.3v button cell configuration, e.g. 2 x LR621 (in series) -or- 1 x CR2025
 * Power management circuit: a discrete component subcircuit combining EH and battery supply, the EFM8 should be configured to enable the battery supply and disconnect the battey when both conditions are true: the jupp is not within an NFC RF field and the EFM8 has completed computing (f*)
 
+## Intended Use Cases
+
+The jupp enables the following use cases:
+
+1. e-receipt/paperless receipts:
+  A jupp user can share a one time identity with a retailer. The retailer can use this provided value to index customer data in their internal database without the user revealing personally identifying information. The retailer can store this information in a distributed ledger (a blockchain or similar) where only the owner of the initial private key (ipk) is able to retrieve and decrypt the record.
+  
+2. sharing contact information in a GDPR conscious manner:
+  A jupp user can share a one time identiy with a second party using a jupp aware device. Such a device can extract an address from the information jupp provides which can then be used to communicate fromt he second party to the jupp user. Because the identity information the jupp provides can only be shared with a single second party, the jupp user can abandon the identity information and from thereonin no longer receive communications from the second party. In this way jupp enables communication between parties without the exchange of personally identifying information.  
+
+## Related Work
+
+ [DCDC](https://dcdc.io) provided a public/private blockchain platform that enables the infrastructure required to enable the above mentioned use cases.
 ## Licensing
 
 The jupp device specification is released under [MPL 2.0](https://tldrlegal.com/license/mozilla-public-license-2.0-(mpl-2))
@@ -75,4 +88,3 @@ The jupp name is not a trademark. jupp is the Estonian word for "a little thing,
 © copyright and copyleft 2018 - all rights reserverd - Benjamin Babik
 
 [blockdiagram]: https://github.com/benbenbenbenbenben/jupp/blob/master/Untitled%20Diagram.png "Block Diagram"
-
