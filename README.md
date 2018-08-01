@@ -38,7 +38,15 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 * Contact smartcard
 
 **data communication can be modulated in the audio spectrum in a similar manner the chirp.io project https://github.com/chirp/chirp-arduino
-##
+
+## Prototype Device BOM
+
+A prototype jupp can be built using the following parts:
+
+* NFC Dynamic Tag: ST25DV-I2C https://www.st.com/en/nfc/st25dv-i2c-series-dynamic-nfc-tags.html?querycriteria=productId=SS1950
+* Microcontroller: https://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee
+* Hardware cryptographic accelerator: ATECC508A https://www.microchip.com/wwwproducts/en/ATECC508A
+* Optional battery: any 3.0-3.3v button cell configuration, e.g. 2 x LR621 (in series) -or- 1 x CR2025
 
 [blockdiagram]: https://github.com/benbenbenbenbenben/jupp/blob/master/Untitled%20Diagram.png "Block Diagram"
 
