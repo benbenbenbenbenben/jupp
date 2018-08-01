@@ -25,7 +25,7 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 * Wrist bracelet
 * Necklace pendant
 
-* extant patents may prohibit commericialisation of jupp in this form factor
+*extant patents may prohibit commericialisation of jupp in this form factor
 
 ### Alternative Form Factor Suggestions
 * Key fob
