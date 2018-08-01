@@ -1,4 +1,5 @@
 # jupp
+## Just Useful Personal Privacy
 A low energy NFC device for cryptographic operations
 
 ## Brief Description
