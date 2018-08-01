@@ -15,7 +15,12 @@ On c.; the jupp has memory slots that can store x509 certificate material that w
 
 ## Block Diagram
 
+![block diagram][blockdiagram]
+
+
 ## Form Factor Suggestions
 
 ##
+
+[blockdiagram]: https://github.com/benbenbenbenbenben/jupp/blob/master/Untitled%20Diagram.png "Block Diagram"
 
