@@ -48,7 +48,7 @@ RC = a 32bit unsigned integer that must increment by 1 each time f* is executed
 
 **data communication can be modulated in the audio spectrum in a similar manner the chirp.io project https://github.com/chirp/chirp-arduino
 
-## Prototype Device BOM
+## Prototype Device BOM (version hw1)
 
 A prototype jupp can be built using the following parts:
 
@@ -57,6 +57,12 @@ A prototype jupp can be built using the following parts:
 * Hardware cryptographic accelerator: [ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A)
 * Optional battery: any 3.0-3.3v button cell configuration, e.g. 2 x LR621 (in series) -or- 1 x CR2025
 * Power management circuit: a discrete component subcircuit combining EH and battery supply, the EFM8 should be configured to enable the battery supply and disconnect the battey when both conditions are true: the jupp is not within an NFC RF field and the EFM8 has completed computing (f*)
+
+## Prototype Device BOM (version hw2)
+
+A prototype jupp can be built in software and loaded onto a supporting JavaCard device. There are numerous available devices, and no assurances can be made about what devices work and how well they work. This said, a jupp applet has been successfully deployed on an [Infineon SLE78 based device sourced from Universal Smartcards](https://www.usmartcards.co.uk/universal-jcard-dual-interface-white-gloss-pvc-card.html) and on an [ACS ACOSJ based device sourced from Smartcard Focus](https://www.smartcardfocus.com/shop/ilp/id~790/acosj-dual-interface-java-card/p/index.shtml). In the case of the ACS device, there is known/confirmed issue with extended ADPUs over the contact interface which is discuseed [here](https://stackoverflow.com/questions/51295639/acosj-gives-incorrect-result-from-apdu-getoffsetcdata) and a workaround for the issue described [here](https://gist.github.com/benbenbenbenbenben/cfe31b2f6abb38bdf503b4679d783d9a). 
+
+*nb: In our limited experience, the Infineon based device though more expensive offered superior contactless reliability. We have not explored the possible reasons for this owing that the resources are not available for such effort at this time.*
 
 ## Intended Use Cases
 
@@ -81,10 +87,10 @@ This license does not prohibit anybody from making and selling the above describ
 
 ## The jupp Name
 
-The jupp name is not a trademark. jupp is the Estonian word for "a little thing, a bit of something" and a backronym for Just Useful Personal Privacy
+The jupp name is not a trademark. jupp is the Estonian word for "a little thing, a bit of something" and a backronym for Just Useful Personal Privacy.
 
 ---
 
-© copyright and copyleft 2018 - all rights reserverd - Benjamin Babik
+© copyright and copyleft 2018 - all rights reserved - Benjamin Babik
 
 [blockdiagram]: https://github.com/benbenbenbenbenben/jupp/blob/master/Untitled%20Diagram.png "Block Diagram"
