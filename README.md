@@ -54,7 +54,7 @@ A prototype jupp can be built using the following parts:
 
 * NFC Dynamic Tag: [ST25DV-I2C](https://www.st.com/en/nfc/st25dv-i2c-series-dynamic-nfc-tags.html?querycriteria=productId=SS1950)
 * Microcontroller: [EFM8 Sleepy Bee](https://www.silabs.com/products/mcu/8-bit/efm8-sleepy-bee)
-* Hardware cryptographic accelerator: [ATECC508A](https://www.microchip.com/wwwproducts/en/ATECC508A)
+* Hardware cryptographic accelerator: [ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A)
 * Optional battery: any 3.0-3.3v button cell configuration, e.g. 2 x LR621 (in series) -or- 1 x CR2025
 * Power management circuit: a discrete component subcircuit combining EH and battery supply, the EFM8 should be configured to enable the battery supply and disconnect the battey when both conditions are true: the jupp is not within an NFC RF field and the EFM8 has completed computing (f*)
 
