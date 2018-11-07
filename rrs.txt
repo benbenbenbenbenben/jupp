@@ -1,0 +1,5 @@
+Diagram(
+NonTerminal("ledger address"),
+Optional(Sequence(Terminal("."),
+NonTerminal("ledger canonical name")))
+)

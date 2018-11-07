@@ -1,0 +1,13 @@
+
+Diagram(
+Optional(
+Sequence(
+NonTerminal("URL"),
+Choice(0, Terminal("?"), Terminal("&")),
+Terminal("jupp=")
+)
+),
+NonTerminal("ledger address"),
+Optional(Sequence(Terminal("."),
+NonTerminal("ledger canonical name")))
+)
